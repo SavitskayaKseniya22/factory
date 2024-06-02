@@ -3,158 +3,630 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Пестовский лесокомбинат</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <header></header>
-    <main>
-      <div class="welcome">
-        <h1>«ПЕСТОВСКИЙ МЯСОКОМБИНАТ»</h1>
-        <p>Cтань частью нашей команды!</p>
-        <button type="button">Отправить анкету</button>
-      </div>
-      <div class="about-us">
-        <h2>о компании</h2>
-        <ul>
-          <li>
-            <div>
-              <span>2</span>
-            </div>
-            <p>Города присутствия: Санкт-Петербург и Москва</p>
-          </li>
-          <li>
-            <div>
-              <span>>30</span>
-            </div>
-            <p>Лет среди лидеров рынка</p>
-          </li>
-          <li>
-            <div><span>100</span></div>
-            <p>Домов и бань сдаем ежегодно</p>
-          </li>
-        </ul>
-      </div>
-      <div class="vacancies">
-        <h2>выбери подразделение</h2>
-        <ul>
-          <li><button type="button">строительный отдел</button></li>
-          <li><button type="button">офис</button></li>
-          <li><button type="button">финансовый отдел</button></li>
-          <li><button type="button">отдел продаж</button></li>
-          <li><button type="button">внештатный сотрудник</button></li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <h3></h3>
-              <p></p>
-            </div>
-            <button type="button">
-              <img src="" alt="plus" />
+    <nav class="navbar-expand-lg">
+      <header class="header">
+        <div class="container_inner">
+          <button
+            type="button"
+            class="btn btn_burger navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarOffcanvasLg"
+            aria-controls="navbarOffcanvasLg"
+          >
+            <svg width="36" height="36">
+              <use xlink:href="./assets/images/svg/sprite.svg#burger" />
+            </svg>
+          </button>
+          <a href="#">
+            <svg width="60" height="30">
+              <use xlink:href="./assets/images/svg/sprite.svg#logo" />
+            </svg>
+          </a>
+          <ul class="header__contacts">
+            <li><a href="tel:+78126037222">8 (812) 603-72-22</a></li>
+            <li><a href="tel:+74993807733">8 (499) 380-77-33</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="navbarOffcanvasLg"
+        aria-labelledby="navbarOffcanvasLgLabel"
+      >
+        <header class="header">
+          <div class="container_inner container_inner_offcanvas">
+            <button
+              type="button"
+              class="btn btn_burger navbar-toggler"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <svg width="36" height="36">
+                <use xlink:href="./assets/images/svg/sprite.svg#cross-black" />
+              </svg>
             </button>
-          </li>
-        </ul>
-        <button type="button">откликнуться на вакансию</button>
-      </div>
-      <div class="advantages">
-        <h2>выбери подразделение</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <div>
-              <h3></h3>
-              <button type="button" class="btn">
-                <img src="" alt="plus" />
-              </button>
+          </div>
+        </header>
+        <section class="application">
+          <form action="" class="application__form">
+            <h2>Заполните анкету</h2>
+
+            <div class="application__content">
+              <section>
+                <label for="name" class="label_underlined">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Ф.И.О"
+                  />
+                </label>
+                <label for="tel" class="label_underlined">
+                  <input
+                    type="number"
+                    name="tel"
+                    id="tel"
+                    placeholder="Телефон"
+                  />
+                </label>
+              </section>
+
+              <label for="vacancies" class="label_underlined">
+                <h3>Отклик на вакансию</h3>
+
+                <select name="vacancies" id="vacancies">
+                  <option selected>Выберите вакансию</option>
+                  <option value="Прораб">Прораб</option>
+                  <option value="Логист">Логист</option>
+                </select>
+              </label>
+
+              <section class="application__cv">
+                <h3>Ваше резюме</h3>
+                <p>
+                  Есть резюме в формате .pdf или .doc?
+                  <br />
+                  Приложите и отправьте его нам.
+                </p>
+                <label for="cv" class="btn btn_red">
+                  Загрузить файл
+
+                  <input
+                    type="file"
+                    id="cv"
+                    name="cv"
+                    accept="image/png, image/jpeg"
+                  />
+                </label>
+              </section>
             </div>
-            <p></p>
-          </li>
-        </ul>
+
+            <label for="confirmation" class="application__confirmation">
+              <input type="checkbox" name="confirmation" id="confirmation" />
+              <p>
+                Я прочитал(а), ознакомился(лась) и согласен(на) с Политикой
+                конфиденциальности, Согласием на обработку персональных данных
+                физическим лицом. Я осознаю, что даю Согласие на обработку
+                персональных данных для использования предоставляемых
+                возможностей Веб-сервиса. Я достиг(ла) 18-летнего возраста
+              </p>
+            </label>
+            <button class="btn btn_red" type="button">Отправить анкету</button>
+          </form>
+        </section>
       </div>
-      <div class="products">
-        <h2>продукты компании</h2>
-        <ul>
-          <li><button type="button" class="btn">Бани</button></li>
-          <li><button type="button" class="btn">Дома</button></li>
-        </ul>
-        <div class="products__carousel"></div>
-      </div>
-      <div class="team-members">
-        <h2>карьерный рост</h2>
-        <p></p>
-        <div class="team-members__carousel">
-          <button type="button" class="btn">
-            <img src="" alt="to the right slide" />
-          </button>
-          <button type="button" class="btn">
-            <img src="" alt="to the left slide" />
-          </button>
-          <ul class="team-members__list">
-            <li class="team-members__item">
-              <figure class="team-members__picture">
-                <img src="" alt="team member photo" />
-                <figcaption>
-                  <h3></h3>
-                  <p></p>
-                </figcaption>
-              </figure>
-              <ul class="team-members__history">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="container_inner">
+          <div class="hero__content">
+            <h1>«пестовский лесокомбинат»</h1>
+            <h3>Cтань частью нашей команды!</h3>
+          </div>
+
+          <button type="button" class="btn btn_red">Отправить анкету</button>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container_inner">
+          <h2>о компании</h2>
+          <ul class="about-us__content">
+            <li>
+              <div class="about-us__feature">
+                <span>2</span>
+              </div>
+              <p>
+                Города присутствия:
+                <br />
+                Санкт-Петербург и Москва
+              </p>
+            </li>
+            <li>
+              <div class="about-us__feature">
+                <span>>30</span>
+              </div>
+              <p>Лет среди лидеров рынка</p>
+            </li>
+            <li>
+              <div class="about-us__feature"><span>100</span></div>
+              <p>Домов и бань сдаем ежегодно</p>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="invitation">
-        <ul>
-          <li>
-            наши успехи - это заслуга замечательных людей, работающий в нашей
-            команде
-          </li>
-          <li>у нас всегда есть вакансии для сильных кандидатов</li>
-        </ul>
-        <div>
+      </section>
+      <section class="vacancies">
+        <div class="container_inner">
+          <h2>выбери подразделение:</h2>
+          <ul class="vacancies__controls">
+            <li>
+              <button type="button" class="btn btn_gray">
+                строительный отдел
+              </button>
+            </li>
+            <li><button type="button" class="btn btn_gray">офис</button></li>
+            <li>
+              <button type="button" class="btn btn_gray">
+                финансовый отдел
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btn btn_gray">отдел продаж</button>
+            </li>
+            <li>
+              <button type="button" class="btn btn_gray">
+                внештатный сотрудник
+              </button>
+            </li>
+          </ul>
+
+          <ul class="vacancies__list">
+            <li class="vacancies__item">
+              <div class="vacancies__header">
+                <div class="vacancies__main-info">
+                  <h3>Прораб</h3>
+                  <p>от 00 000 руб</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseVacancy000"
+                  aria-expanded="false"
+                  aria-controls="collapseVacancy000"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="vacancies__content collapse" id="collapseVacancy000">
+                <li>
+                  <h4>Задачи:</h4>
+                  <ul>
+                    <li>описание</li>
+                    <li>описание</li>
+                    <li>описание</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Наши ожидания:</h4>
+                  <ul>
+                    <li>описание</li>
+                    <li>описание</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Мы предлагаем:</h4>
+                  <ul>
+                    <li>график 5/2 с гибким началом рабочего дня;</li>
+                    <li>
+                      оформление по ТК РФ с первого рабочего дня, полностью
+                      белую заработную плату;
+                    </li>
+                    <li>ежеквартальную премию по итогам работы;</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn_red">
+            откликнуться на вакансию
+          </button>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="container_inner">
+          <h2>преимущества компании</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__header">
+                <h3>Качество продукта</h3>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseQuality"
+                  aria-expanded="false"
+                  aria-controls="collapseQuality"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <p class="collapse advantages__content" id="collapseQuality">
+                Мы гордимся результатами своей работы! Мы убеждены, что именно
+                качество — это самое главное, это то, что даёт Нам уверенность в
+                завтрашнем дне.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__header">
+                <h3>Популярность бренда в сети</h3>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapsePopularity"
+                  aria-expanded="false"
+                  aria-controls="collapsePopularity"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <p class="collapse advantages__content" id="collapsePopularity">
+                Мы занимаем высокие позиции в поисковой выдаче и имеем
+                многочисленные отзывы, привлекающие новых заказчиков независимо
+                от времени года.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__header">
+                <h3>Передовое рабочее место</h3>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseWorkPlace"
+                  aria-expanded="false"
+                  aria-controls="collapseWorkPlace"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <p class="collapse advantages__content" id="collapseWorkPlace">
+                Комфортный офис в центре г. Санкт-Петербург, оборудованный
+                передовыми технологиями. Твой рабочий компьютер может быть даже
+                в твоём смартфоне!
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__header">
+                <h3>Свои автоматизированные системы обучения</h3>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAutomatisation"
+                  aria-expanded="false"
+                  aria-controls="collapseAutomatisation"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <p
+                class="collapse advantages__content"
+                id="collapseAutomatisation"
+              >
+                Создали и постоянно улучшаем собственные автоматизированные
+                системы обучения специалистов и повышения их квалификации внутри
+                компании.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__header">
+                <h3>Сотрудничество с ведущими Компаниями рынка</h3>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseCollaboration"
+                  aria-expanded="false"
+                  aria-controls="collapseCollaboration"
+                >
+                  <svg width="25" height="25" class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg width="25" height="25" class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <p
+                class="collapse advantages__content"
+                id="collapseCollaboration"
+              >
+                Сотрудничаем с ведущими Компаниями рынка строительных
+                материалов: «Grand Line», «Петрович», «Окна Петербурга»,
+                «КраскиДоски», «Technonicol» и другими.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container_inner">
+          <h2>продукты компании</h2>
+          <ul class="products__controls">
+            <li><button type="button" class="btn btn_gray">Бани</button></li>
+            <li><button type="button" class="btn btn_gray">Дома</button></li>
+          </ul>
+          <swiper-container
+            slides-per-view="2"
+            centered-slides="true"
+            pagination="true"
+            navigation="true"
+            pagination-clickable="true"
+            space-between="15"
+            initial-slide="0"
+            loop="true"
+          >
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
+            <swiper-slide></swiper-slide>
+          </swiper-container>
+        </div>
+      </section>
+
+      <section class="team-members">
+        <div class="container_inner">
+          <h2>карьерный рост</h2>
           <p>
-            Если чувствуешь в Себе потенциал и здоровые амбиции - ждем рядом с
-            Нами!
+            Наша Компания является ярким примером, где достойные люди смело и
+            заслуженно поднимаются по карьерной лестнице.
+            <br />
+            <br />
+            Мы ценим стремление к развитию и предоставляем все необходимые для
+            этого условия.
           </p>
-          <button type="button" class="btn">Присоединитсья к команде</button>
+
+          <swiper-container navigation="true" loop="true">
+            <swiper-slide class="team-members__item">
+              <figure class="team-members__picture">
+                <img
+                  src="./assets/images/webp/person-1.webp"
+                  alt="Олег Воробьев"
+                />
+                <figcaption>
+                  <h3>Олег Воробьев</h3>
+                  <p>Прораб</p>
+                </figcaption>
+              </figure>
+              <ul class="team-members__history">
+                <li>
+                  В Компании с 2018 года. Начал с позиции плотника в
+                  строительной бригаде.
+                </li>
+                <li>
+                  В течение года работы Олег стал бригадиром и был приглашён в
+                  офис Компании на должность штатного Производителя строительных
+                  работ.
+                </li>
+                <li>
+                  На данный момент в Его подчинении находятся 9 строительных
+                  бригад. Олег вносит весомый вклад в итоговый результат
+                  Компании, а это реализация 100 объектов в год!
+                </li>
+              </ul>
+            </swiper-slide>
+            <swiper-slide class="team-members__item">
+              <figure class="team-members__picture">
+                <img
+                  src="./assets/images/webp/person-2.webp"
+                  alt="Мария Обухова"
+                />
+                <figcaption>
+                  <h3>Мария Обухова</h3>
+                  <p>Руководитель финансковой службы</p>
+                </figcaption>
+              </figure>
+
+              <ul class="team-members__history">
+                <li>
+                  В декабре 2018 года заступил на должность Менеджера отдела
+                  продаж.
+                </li>
+                <li>
+                  После 9 месяцев стабильных результатов, зарекомендовав себя
+                  как надёжный сотрудник, получил ответственную должность
+                  Логиста.
+                </li>
+                <li>
+                  Через год Даниил занял должность Специалиста службы снабжения,
+                  взяв на себя помимо закупа материала ещё и крайне важную роль
+                  Сметчика.
+                </li>
+              </ul>
+            </swiper-slide>
+            <swiper-slide class="team-members__item">
+              <figure class="team-members__picture">
+                <img
+                  src="./assets/images/webp/person-3.webp"
+                  alt="Даниил Басенков"
+                />
+                <figcaption>
+                  <h3>Даниил Басенков</h3>
+                  <p>Менеджер по снабжению</p>
+                </figcaption>
+              </figure>
+
+              <ul class="team-members__history">
+                <li>
+                  В декабре 2018 года заступил на должность Менеджера отдела
+                  продаж.
+                </li>
+                <li>
+                  После 9 месяцев стабильных результатов, зарекомендовав себя
+                  как надёжный сотрудник, получил ответственную должность
+                  Логиста.
+                </li>
+                <li>
+                  Через год Даниил занял должность Специалиста службы снабжения,
+                  взяв на себя помимо закупа материала ещё и крайне важную роль
+                  Сметчика.
+                </li>
+              </ul>
+            </swiper-slide>
+          </swiper-container>
         </div>
-      </div>
-      <div class="contacts">
-        <ul>
-          <li><button type="button" class="btn">Санкт-Петербург</button></li>
-          <li><button type="button" class="btn">Москва</button></li>
-        </ul>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <ul>
-          <li><img src="" alt="YouTube" /></li>
-          <li><img src="" alt="VK" /></li>
-          <li><img src="" alt="Telegram" /></li>
-        </ul>
-        <div>
-          <img src="" alt="Карта" />
+      </section>
+      <section class="invitation">
+        <div class="container_inner">
+          <p class="invitation__notes">
+            Наши успехи &mdash; это заслуга замечательных людей, работающий в
+            нашей команде.
+            <br />
+            <br />
+            У Нас всегда есть вакансии для сильных кандидатов
+          </p>
+
+          <div class="invitation__widget">
+            <p>
+              Если чувствуешь в Себе потенциал и здоровые амбиции &mdash; ждем
+              рядом с Нами!
+            </p>
+            <button type="button" class="btn btn_red">
+              присоединитсья к команде
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+      <section class="contacts">
+        <div class="container_inner">
+          <h2>Контакты</h2>
+          <ul class="contacts__controls">
+            <li>
+              <button type="button" class="btn btn_gray">
+                Санкт-Петербург
+              </button>
+            </li>
+            <li><button type="button" class="btn btn_gray">Москва</button></li>
+          </ul>
+
+          <ul class="contacts__details">
+            <li><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
+            <li><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
+            <li>
+              <a href="#">
+                ул. Заозёрная, д. 8 к. 2, офис 202
+                <br />
+                (7 мин. пешком от метро Фрунзенская)
+              </a>
+            </li>
+          </ul>
+
+          <ul class="contacts__socials">
+            <li>
+              <a href="#">
+                <svg width="50" height="50">
+                  <use xlink:href="./assets/images/svg/sprite.svg#youtube" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="50" height="50">
+                  <use xlink:href="./assets/images/svg/sprite.svg#vk" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="50" height="50">
+                  <use xlink:href="./assets/images/svg/sprite.svg#telegram" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="contacts__map">
+            <img src="./assets/images/webp/map.webp" alt="Карта" />
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>
-        © 2023 Пестовский Лесокомбинат.
-        <br />
-        Все права защищены.
-      </p>
-      <ul>
-        <li><a href="#">Реквизиты</a></li>
-        <li><a href="#">Политика конфиденциальности</a></li>
-      </ul>
-      <img src="" alt="Логотип" />
+    <footer class="footer">
+      <div class="container_inner">
+        <p class="footer__copyright">
+          © 2023 Пестовский Лесокомбинат.
+          <br />
+          Все права защищены.
+        </p>
+        <hr />
+        <ul class="footer__links">
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+        <a href="#">
+          <img src="./assets/images/svg/logo-alpha.svg" alt="Логотип" />
+        </a>
+      </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
