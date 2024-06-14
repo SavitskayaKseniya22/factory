@@ -127,11 +127,13 @@
             <label for="confirmation" class="application__confirmation">
               <input type="checkbox" name="confirmation" id="confirmation" />
               <p>
-                Я прочитал(а), ознакомился(лась) и согласен(на) с Политикой
+                <span>Я прочитал(а), ознакомился(лась) и согласен(на) с Политикой
                 конфиденциальности, Согласием на обработку персональных данных
                 физическим лицом. Я осознаю, что даю Согласие на обработку
                 персональных данных для использования предоставляемых
-                возможностей Веб-сервиса. Я достиг(ла) 18-летнего возраста
+                возможностей Веб-сервиса.</span>
+                <span>Я достиг(ла) 18-летнего возраста</span>
+                 
               </p>
             </label>
             <button class="btn btn_red" type="button">Отправить анкету</button>
@@ -155,9 +157,9 @@
         <div class="container_inner">
           <h2>о компании</h2>
           <ul class="about-us__content">
-            <li>
+            <li class="about-us__item">
               <div class="about-us__feature">
-                <span>2</span>
+                2
               </div>
               <p>
                 Города присутствия:
@@ -165,14 +167,14 @@
                 Санкт-Петербург и Москва
               </p>
             </li>
-            <li>
+            <li class="about-us__item">
               <div class="about-us__feature">
-                <span>>30</span>
+                >30
               </div>
               <p>Лет среди лидеров рынка</p>
             </li>
-            <li>
-              <div class="about-us__feature"><span>100</span></div>
+            <li class="about-us__item">
+              <div class="about-us__feature">100</div>
               <p>Домов и бань сдаем ежегодно</p>
             </li>
           </ul>
@@ -180,7 +182,7 @@
       </section>
       <section class="vacancies">
         <div class="container_inner">
-          <h2>выбери подразделение:</h2>
+          <h2 class="vacancies__title">выбери подразделение:</h2>
           <ul class="vacancies__controls">
             <li>
               <button type="button" class="btn btn_gray">
@@ -206,9 +208,9 @@
           <ul class="vacancies__list">
             <li class="vacancies__item">
               <div class="vacancies__header">
-                <div class="vacancies__main-info">
-                  <h3>Прораб</h3>
-                  <p>от 00 000 руб</p>
+                <div class="vacancy__info">
+                  <h3 class="vacancy__title">Прораб</h3>
+                  <p class="vacancy__price">от 00 000 руб</p>
                 </div>
                 <button
                   type="button"
@@ -218,10 +220,61 @@
                   aria-expanded="false"
                   aria-controls="collapseVacancy000"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
+                    <use xlink:href="./assets/images/svg/sprite.svg#cross" />
+                  </svg>
+                </button>
+              </div>
+              <ul class="vacancies__content collapse" id="collapseVacancy000">
+                <li>
+                  <h4>Задачи:</h4>
+                  <ul>
+                    <li>описание</li>
+                    <li>описание</li>
+                    <li>описание</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Наши ожидания:</h4>
+                  <ul>
+                    <li>описание</li>
+                    <li>описание</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Мы предлагаем:</h4>
+                  <ul>
+                    <li>график 5/2 с гибким началом рабочего дня;</li>
+                    <li>
+                      оформление по ТК РФ с первого рабочего дня, полностью
+                      белую заработную плату;
+                    </li>
+                    <li>ежеквартальную премию по итогам работы;</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="vacancies__item">
+              <div class="vacancies__header">
+                <div class="vacancy__info">
+                  <h3 class="vacancy__title">Специались службы снабжения</h3>
+                  <p class="vacancy__price">от 00 000 руб</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn_collapse-control"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseVacancy000"
+                  aria-expanded="false"
+                  aria-controls="collapseVacancy000"
+                >
+                  <svg class="collapse_true">
+                    <use xlink:href="./assets/images/svg/sprite.svg#plus" />
+                  </svg>
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -278,10 +331,10 @@
                   aria-expanded="false"
                   aria-controls="collapseQuality"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -303,10 +356,10 @@
                   aria-expanded="false"
                   aria-controls="collapsePopularity"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -328,10 +381,10 @@
                   aria-expanded="false"
                   aria-controls="collapseWorkPlace"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -353,10 +406,10 @@
                   aria-expanded="false"
                   aria-controls="collapseAutomatisation"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -381,10 +434,10 @@
                   aria-expanded="false"
                   aria-controls="collapseCollaboration"
                 >
-                  <svg width="25" height="25" class="collapse_true">
+                  <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
                   </svg>
-                  <svg width="25" height="25" class="collapse_false">
+                  <svg class="collapse_false">
                     <use xlink:href="./assets/images/svg/sprite.svg#cross" />
                   </svg>
                 </button>
@@ -432,13 +485,16 @@
       <section class="team-members">
         <div class="container_inner">
           <h2>карьерный рост</h2>
-          <p>
-            Наша Компания является ярким примером, где достойные люди смело и
-            заслуженно поднимаются по карьерной лестнице.
-            <br />
-            <br />
-            Мы ценим стремление к развитию и предоставляем все необходимые для
-            этого условия.
+          <p class="team-members__preview">
+            <span> Наша Компания является ярким примером, где достойные люди смело и
+            заслуженно поднимаются по карьерной лестнице.</span>
+            <span>Мы ценим стремление к развитию и предоставляем все необходимые для
+            этого условия.</span>
+           
+            
+           
+            
+            
           </p>
 
           <swiper-container navigation="true" loop="true">
@@ -449,7 +505,7 @@
                   alt="Олег Воробьев"
                 />
                 <figcaption>
-                  <h3>Олег Воробьев</h3>
+                  <p class="team-members__title">Олег Воробьев</p>
                   <p>Прораб</p>
                 </figcaption>
               </figure>
@@ -477,7 +533,7 @@
                   alt="Мария Обухова"
                 />
                 <figcaption>
-                  <h3>Мария Обухова</h3>
+                  <p class="team-members__title">Мария Обухова</p>
                   <p>Руководитель финансковой службы</p>
                 </figcaption>
               </figure>
@@ -506,7 +562,7 @@
                   alt="Даниил Басенков"
                 />
                 <figcaption>
-                  <h3>Даниил Басенков</h3>
+                  <p class="team-members__title">Даниил Басенков</p>
                   <p>Менеджер по снабжению</p>
                 </figcaption>
               </figure>
@@ -534,11 +590,10 @@
       <section class="invitation">
         <div class="container_inner">
           <p class="invitation__notes">
-            Наши успехи &mdash; это заслуга замечательных людей, работающий в
-            нашей команде.
-            <br />
-            <br />
-            У Нас всегда есть вакансии для сильных кандидатов
+            <span>Наши успехи &mdash; это заслуга замечательных людей, работающий в
+            нашей команде.</span>
+            <span>У Нас всегда есть вакансии для сильных кандидатов</span>
+            
           </p>
 
           <div class="invitation__widget">
@@ -565,9 +620,9 @@
           </ul>
 
           <ul class="contacts__details">
-            <li><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
-            <li><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
-            <li>
+            <li class="contacts__line"><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
+            <li class="contacts__line"><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
+            <li class="contacts__line">
               <a href="#">
                 ул. Заозёрная, д. 8 к. 2, офис 202
                 <br />
@@ -599,20 +654,18 @@
               </a>
             </li>
           </ul>
-          <div class="contacts__map">
-            <img src="./assets/images/webp/map.webp" alt="Карта" />
-          </div>
+          <img  class="contacts__map" src="./assets/images/webp/map.webp" alt="Карта" />
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container_inner">
-        <p class="footer__copyright">
+        <p>
           © 2023 Пестовский Лесокомбинат.
           <br />
           Все права защищены.
         </p>
-        <hr />
+        
         <ul class="footer__links">
           <li><a href="#">Реквизиты</a></li>
           <li><a href="#">Политика конфиденциальности</a></li>
