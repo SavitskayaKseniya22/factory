@@ -603,16 +603,17 @@
       </section>
       <section class="contacts">
         <div class="container_inner">
+          <input type="radio" name="contacts" id="contacts-spb" class="contacts__radio" />
+          <input type="radio" name="contacts" id="contacts-msk" class="contacts__radio" />
           <div class="contacts__content">
             <h2>Контакты</h2>
-            <ul class="contacts__controls">
-              <li>
-                <button type="button" class="btn btn_gray">Санкт-Петербург</button>
-              </li>
-              <li><button type="button" class="btn btn_gray">Москва</button></li>
-            </ul>
 
-            <ul class="contacts__details">
+            <div class="contacts__controls">
+              <label for="contacts-spb" class="btn btn_gray">Санкт-Петербург</label>
+              <label for="contacts-msk" class="btn btn_gray">Москва</label>
+            </div>
+
+            <ul class="contacts__details" data-id="contacts-spb">
               <li class="contacts__line"><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
               <li class="contacts__line"><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
               <li class="contacts__line">
@@ -620,6 +621,17 @@
                   ул. Заозёрная, д. 8 к. 2, офис 202
                   <br />
                   (7 мин. пешком от метро Фрунзенская)
+                </a>
+              </li>
+            </ul>
+
+            <ul class="contacts__details" data-id="contacts-msk">
+              <li class="contacts__line"><a href="tel:+78126027760">8 (499) 380-77-33</a></li>
+              <li class="contacts__line"><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
+              <li class="contacts__line">
+                <a href="#">
+                  ул. Складочная, д. 1, стр. 18, <br />
+                  подъезд 3, этаж 2, офис 209
                 </a>
               </li>
             </ul>
@@ -649,7 +661,19 @@
             </ul>
           </div>
 
-          <img class="contacts__map" src="./assets/images/webp/map.webp" alt="Карта" />
+          <div class="contacts__map" data-id="contacts-spb">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Abc278a7241a2da8c218109ac17ed7791ab32e178617d48a30ea54aabd28aa21c&amp;source=constructor"
+              frameborder="0"
+            ></iframe>
+          </div>
+
+          <div class="contacts__map" data-id="contacts-msk">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A89ab0cc3c3bc91b2b182930dfa6e1771fccb7d437b2eab3fd007eabdceb4cdca&amp;source=constructor"
+              frameborder="0"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
