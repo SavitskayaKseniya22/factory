@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Пестовский лесокомбинат</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -39,13 +36,22 @@
             </svg>
           </button>
           <a href="#">
-            <svg width="60" height="30">
+            <svg class="header__logo">
               <use xlink:href="./assets/images/svg/sprite.svg#logo" />
             </svg>
           </a>
+          <ul class="header__nav">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Дома</a></li>
+            <li><a href="#">Бани</a></li>
+          </ul>
           <ul class="header__contacts">
-            <li><a href="tel:+78126037222">8 (812) 603-72-22</a></li>
-            <li><a href="tel:+74993807733">8 (499) 380-77-33</a></li>
+            <li>
+              <a href="tel:+78126037222"><span class="header__label">Санкт-Петербург: </span>8 (812) 603-72-22</a>
+            </li>
+            <li>
+              <a href="tel:+74993807733"><span class="header__label">Москва: </span>8 (499) 380-77-33</a>
+            </li>
           </ul>
         </div>
       </header>
@@ -58,12 +64,7 @@
       >
         <header class="header">
           <div class="container_inner container_inner_offcanvas">
-            <button
-              type="button"
-              class="btn btn_burger navbar-toggler"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            >
+            <button type="button" class="btn btn_burger navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
               <svg width="36" height="36">
                 <use xlink:href="./assets/images/svg/sprite.svg#cross-black" />
               </svg>
@@ -77,20 +78,10 @@
             <div class="application__content">
               <section>
                 <label for="name" class="label_underlined">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Ф.И.О"
-                  />
+                  <input type="text" name="name" id="name" placeholder="Ф.И.О" />
                 </label>
                 <label for="tel" class="label_underlined">
-                  <input
-                    type="number"
-                    name="tel"
-                    id="tel"
-                    placeholder="Телефон"
-                  />
+                  <input type="number" name="tel" id="tel" placeholder="Телефон" />
                 </label>
               </section>
 
@@ -114,12 +105,7 @@
                 <label for="cv" class="btn btn_red">
                   Загрузить файл
 
-                  <input
-                    type="file"
-                    id="cv"
-                    name="cv"
-                    accept="image/png, image/jpeg"
-                  />
+                  <input type="file" id="cv" name="cv" accept="image/png, image/jpeg" />
                 </label>
               </section>
             </div>
@@ -127,13 +113,12 @@
             <label for="confirmation" class="application__confirmation">
               <input type="checkbox" name="confirmation" id="confirmation" />
               <p>
-                <span>Я прочитал(а), ознакомился(лась) и согласен(на) с Политикой
-                конфиденциальности, Согласием на обработку персональных данных
-                физическим лицом. Я осознаю, что даю Согласие на обработку
-                персональных данных для использования предоставляемых
-                возможностей Веб-сервиса.</span>
+                <span
+                  >Я прочитал(а), ознакомился(лась) и согласен(на) с Политикой конфиденциальности, Согласием на
+                  обработку персональных данных физическим лицом. Я осознаю, что даю Согласие на обработку персональных
+                  данных для использования предоставляемых возможностей Веб-сервиса.</span
+                >
                 <span>Я достиг(ла) 18-летнего возраста</span>
-                 
               </p>
             </label>
             <button class="btn btn_red" type="button">Отправить анкету</button>
@@ -158,9 +143,7 @@
           <h2>о компании</h2>
           <ul class="about-us__content">
             <li class="about-us__item">
-              <div class="about-us__feature">
-                2
-              </div>
+              <div class="about-us__feature">2</div>
               <p>
                 Города присутствия:
                 <br />
@@ -168,9 +151,7 @@
               </p>
             </li>
             <li class="about-us__item">
-              <div class="about-us__feature">
-                >30
-              </div>
+              <div class="about-us__feature">>30</div>
               <p>Лет среди лидеров рынка</p>
             </li>
             <li class="about-us__item">
@@ -185,23 +166,17 @@
           <h2 class="vacancies__title">выбери подразделение:</h2>
           <ul class="vacancies__controls">
             <li>
-              <button type="button" class="btn btn_gray">
-                строительный отдел
-              </button>
+              <button type="button" class="btn btn_gray">строительный отдел</button>
             </li>
             <li><button type="button" class="btn btn_gray">офис</button></li>
             <li>
-              <button type="button" class="btn btn_gray">
-                финансовый отдел
-              </button>
+              <button type="button" class="btn btn_gray">финансовый отдел</button>
             </li>
             <li>
               <button type="button" class="btn btn_gray">отдел продаж</button>
             </li>
             <li>
-              <button type="button" class="btn btn_gray">
-                внештатный сотрудник
-              </button>
+              <button type="button" class="btn btn_gray">внештатный сотрудник</button>
             </li>
           </ul>
 
@@ -248,10 +223,7 @@
                   <h4>Мы предлагаем:</h4>
                   <ul>
                     <li>график 5/2 с гибким началом рабочего дня;</li>
-                    <li>
-                      оформление по ТК РФ с первого рабочего дня, полностью
-                      белую заработную плату;
-                    </li>
+                    <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
                     <li>ежеквартальную премию по итогам работы;</li>
                   </ul>
                 </li>
@@ -260,16 +232,16 @@
             <li class="vacancies__item">
               <div class="vacancies__header">
                 <div class="vacancy__info">
-                  <h3 class="vacancy__title">Специались службы снабжения</h3>
+                  <h3 class="vacancy__title">Специалист службы снабжения</h3>
                   <p class="vacancy__price">от 00 000 руб</p>
                 </div>
                 <button
                   type="button"
                   class="btn btn_collapse-control"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseVacancy000"
+                  data-bs-target="#collapseVacancy001"
                   aria-expanded="false"
-                  aria-controls="collapseVacancy000"
+                  aria-controls="collapseVacancy001"
                 >
                   <svg class="collapse_true">
                     <use xlink:href="./assets/images/svg/sprite.svg#plus" />
@@ -279,7 +251,7 @@
                   </svg>
                 </button>
               </div>
-              <ul class="vacancies__content collapse" id="collapseVacancy000">
+              <ul class="vacancies__content collapse" id="collapseVacancy001">
                 <li>
                   <h4>Задачи:</h4>
                   <ul>
@@ -299,10 +271,7 @@
                   <h4>Мы предлагаем:</h4>
                   <ul>
                     <li>график 5/2 с гибким началом рабочего дня;</li>
-                    <li>
-                      оформление по ТК РФ с первого рабочего дня, полностью
-                      белую заработную плату;
-                    </li>
+                    <li>оформление по ТК РФ с первого рабочего дня, полностью белую заработную плату;</li>
                     <li>ежеквартальную премию по итогам работы;</li>
                   </ul>
                 </li>
@@ -310,16 +279,14 @@
             </li>
           </ul>
 
-          <button type="button" class="btn btn_red">
-            откликнуться на вакансию
-          </button>
+          <button type="button" class="btn btn_red">откликнуться на вакансию</button>
         </div>
       </section>
 
       <section class="advantages">
         <div class="container_inner">
           <h2>преимущества компании</h2>
-          <ul class="advantages__list">
+          <ul class="advantages__list_mobile">
             <li class="advantages__item">
               <div class="advantages__header">
                 <h3>Качество продукта</h3>
@@ -340,9 +307,8 @@
                 </button>
               </div>
               <p class="collapse advantages__content" id="collapseQuality">
-                Мы гордимся результатами своей работы! Мы убеждены, что именно
-                качество — это самое главное, это то, что даёт Нам уверенность в
-                завтрашнем дне.
+                Мы гордимся результатами своей работы! Мы убеждены, что именно качество — это самое главное, это то, что
+                даёт Нам уверенность в завтрашнем дне.
               </p>
             </li>
             <li class="advantages__item">
@@ -365,9 +331,8 @@
                 </button>
               </div>
               <p class="collapse advantages__content" id="collapsePopularity">
-                Мы занимаем высокие позиции в поисковой выдаче и имеем
-                многочисленные отзывы, привлекающие новых заказчиков независимо
-                от времени года.
+                Мы занимаем высокие позиции в поисковой выдаче и имеем многочисленные отзывы, привлекающие новых
+                заказчиков независимо от времени года.
               </p>
             </li>
             <li class="advantages__item">
@@ -390,9 +355,8 @@
                 </button>
               </div>
               <p class="collapse advantages__content" id="collapseWorkPlace">
-                Комфортный офис в центре г. Санкт-Петербург, оборудованный
-                передовыми технологиями. Твой рабочий компьютер может быть даже
-                в твоём смартфоне!
+                Комфортный офис в центре г. Санкт-Петербург, оборудованный передовыми технологиями. Твой рабочий
+                компьютер может быть даже в твоём смартфоне!
               </p>
             </li>
             <li class="advantages__item">
@@ -414,13 +378,9 @@
                   </svg>
                 </button>
               </div>
-              <p
-                class="collapse advantages__content"
-                id="collapseAutomatisation"
-              >
-                Создали и постоянно улучшаем собственные автоматизированные
-                системы обучения специалистов и повышения их квалификации внутри
-                компании.
+              <p class="collapse advantages__content" id="collapseAutomatisation">
+                Создали и постоянно улучшаем собственные автоматизированные системы обучения специалистов и повышения их
+                квалификации внутри компании.
               </p>
             </li>
             <li class="advantages__item">
@@ -442,14 +402,63 @@
                   </svg>
                 </button>
               </div>
-              <p
-                class="collapse advantages__content"
-                id="collapseCollaboration"
-              >
-                Сотрудничаем с ведущими Компаниями рынка строительных
-                материалов: «Grand Line», «Петрович», «Окна Петербурга»,
-                «КраскиДоски», «Technonicol» и другими.
+              <p class="collapse advantages__content" id="collapseCollaboration">
+                Сотрудничаем с ведущими Компаниями рынка строительных материалов: «Grand Line», «Петрович», «Окна
+                Петербурга», «КраскиДоски», «Technonicol» и другими.
               </p>
+            </li>
+          </ul>
+
+          <ul class="advantages__list_desktop">
+            <li class="advantages__item">
+              <img src="./assets/images/svg/medal.svg" alt="Медаль" />
+              <div class="advantages__content">
+                <h3>Качество продукта</h3>
+                <p>
+                  Мы гордимся результатами своей работы! Мы убеждены, что именно качество — это самое главное, это то,
+                  что даёт Нам уверенность в завтрашнем дне.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img src="./assets/images/svg/world.svg" alt="Медаль" />
+              <div class="advantages__content">
+                <h3>Популярность бренда в сети</h3>
+                <p>
+                  Мы занимаем высокие позиции в поисковой выдаче и имеем многочисленные отзывы, привлекающие новых
+                  заказчиков независимо от времени года.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img src="./assets/images/svg/office-chair.svg" alt="Медаль" />
+              <div class="advantages__content">
+                <h3>Передовое рабочее место</h3>
+                <p>
+                  Комфортный офис в центре г. Санкт-Петербург, оборудованный передовыми технологиями. Твой рабочий
+                  компьютер может быть даже в твоём смартфоне!
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img src="./assets/images/svg/streamline.svg" alt="Медаль" />
+              <div class="advantages__content">
+                <h3>Свои автоматизированные системы обучения</h3>
+                <p>
+                  Создали и постоянно улучшаем собственные автоматизированные системы обучения специалистов и повышения
+                  их квалификации внутри компании.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img src="./assets/images/svg/solar_cup-first-bold.svg" alt="Медаль" />
+              <div class="advantages__content">
+                <h3>Сотрудничество с ведущими Компаниями рынка</h3>
+                <p>
+                  Сотрудничаем с ведущими Компаниями рынка строительных материалов: «Grand Line», «Петрович», «Окна
+                  Петербурга», «КраскиДоски», «Technonicol» и другими.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -482,107 +491,96 @@
         </div>
       </section>
 
-      <section class="team-members">
+      <section class="team">
         <div class="container_inner">
           <h2>карьерный рост</h2>
-          <p class="team-members__preview">
-            <span> Наша Компания является ярким примером, где достойные люди смело и
-            заслуженно поднимаются по карьерной лестнице.</span>
-            <span>Мы ценим стремление к развитию и предоставляем все необходимые для
-            этого условия.</span>
-           
-            
-           
-            
-            
-          </p>
+
+          <div class="team__info">
+            <div class="team__info-item">
+              <img src="./assets/images/svg/diagram.svg" alt="Медаль" />
+              <p>
+                Наша Компания является ярким примером, где достойные люди смело и заслуженно поднимаются по карьерной
+                лестнице.
+              </p>
+            </div>
+            <div class="team__info-item">
+              <img src="./assets/images/svg/man.svg" alt="Медаль" />
+              <p>Мы ценим стремление к развитию и предоставляем все необходимые для этого условия.</p>
+            </div>
+          </div>
 
           <swiper-container navigation="true" loop="true">
-            <swiper-slide class="team-members__item">
-              <figure class="team-members__picture">
-                <img
-                  src="./assets/images/webp/person-1.webp"
-                  alt="Олег Воробьев"
-                />
-                <figcaption>
-                  <p class="team-members__title">Олег Воробьев</p>
+            <swiper-slide class="team__item">
+              <div class="team__picture">
+                <img src="./assets/images/webp/person-1.webp" alt="Олег Воробьев" />
+              </div>
+
+              <div class="team__content">
+                <div>
+                  <p class="team__title">Олег Воробьев</p>
                   <p>Прораб</p>
-                </figcaption>
-              </figure>
-              <ul class="team-members__history">
-                <li>
-                  В Компании с 2018 года. Начал с позиции плотника в
-                  строительной бригаде.
-                </li>
-                <li>
-                  В течение года работы Олег стал бригадиром и был приглашён в
-                  офис Компании на должность штатного Производителя строительных
-                  работ.
-                </li>
-                <li>
-                  На данный момент в Его подчинении находятся 9 строительных
-                  бригад. Олег вносит весомый вклад в итоговый результат
-                  Компании, а это реализация 100 объектов в год!
-                </li>
-              </ul>
+                </div>
+
+                <ul class="team__history">
+                  <li>В Компании с 2018 года. Начал с позиции плотника в строительной бригаде.</li>
+                  <li>
+                    В течение года работы Олег стал бригадиром и был приглашён в офис Компании на должность штатного
+                    Производителя строительных работ.
+                  </li>
+                  <li>
+                    На данный момент в Его подчинении находятся 9 строительных бригад. Олег вносит весомый вклад в
+                    итоговый результат Компании, а это реализация 100 объектов в год!
+                  </li>
+                </ul>
+              </div>
             </swiper-slide>
-            <swiper-slide class="team-members__item">
-              <figure class="team-members__picture">
-                <img
-                  src="./assets/images/webp/person-2.webp"
-                  alt="Мария Обухова"
-                />
-                <figcaption>
-                  <p class="team-members__title">Мария Обухова</p>
+            <swiper-slide class="team__item">
+              <div class="team__picture">
+                <img src="./assets/images/webp/person-2.webp" alt="Мария Обухова" />
+              </div>
+
+              <div class="team__content">
+                <div>
+                  <p class="team__title">Мария Обухова</p>
                   <p>Руководитель финансковой службы</p>
-                </figcaption>
-              </figure>
+                </div>
 
-              <ul class="team-members__history">
-                <li>
-                  В декабре 2018 года заступил на должность Менеджера отдела
-                  продаж.
-                </li>
-                <li>
-                  После 9 месяцев стабильных результатов, зарекомендовав себя
-                  как надёжный сотрудник, получил ответственную должность
-                  Логиста.
-                </li>
-                <li>
-                  Через год Даниил занял должность Специалиста службы снабжения,
-                  взяв на себя помимо закупа материала ещё и крайне важную роль
-                  Сметчика.
-                </li>
-              </ul>
+                <ul class="team__history">
+                  <li>В декабре 2018 года заступил на должность Менеджера отдела продаж.</li>
+                  <li>
+                    После 9 месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил
+                    ответственную должность Логиста.
+                  </li>
+                  <li>
+                    Через год Даниил занял должность Специалиста службы снабжения, взяв на себя помимо закупа материала
+                    ещё и крайне важную роль Сметчика.
+                  </li>
+                </ul>
+              </div>
             </swiper-slide>
-            <swiper-slide class="team-members__item">
-              <figure class="team-members__picture">
-                <img
-                  src="./assets/images/webp/person-3.webp"
-                  alt="Даниил Басенков"
-                />
-                <figcaption>
-                  <p class="team-members__title">Даниил Басенков</p>
-                  <p>Менеджер по снабжению</p>
-                </figcaption>
-              </figure>
+            <swiper-slide class="team__item">
+              <div class="team__picture">
+                <img src="./assets/images/webp/person-3.webp" alt="Даниил Басенков" />
+              </div>
 
-              <ul class="team-members__history">
-                <li>
-                  В декабре 2018 года заступил на должность Менеджера отдела
-                  продаж.
-                </li>
-                <li>
-                  После 9 месяцев стабильных результатов, зарекомендовав себя
-                  как надёжный сотрудник, получил ответственную должность
-                  Логиста.
-                </li>
-                <li>
-                  Через год Даниил занял должность Специалиста службы снабжения,
-                  взяв на себя помимо закупа материала ещё и крайне важную роль
-                  Сметчика.
-                </li>
-              </ul>
+              <div class="team__content">
+                <div>
+                  <p class="team__title">Даниил Басенков</p>
+                  <p>Менеджер по снабжению</p>
+                </div>
+
+                <ul class="team__history">
+                  <li>В декабре 2018 года заступил на должность Менеджера отдела продаж.</li>
+                  <li>
+                    После 9 месяцев стабильных результатов, зарекомендовав себя как надёжный сотрудник, получил
+                    ответственную должность Логиста.
+                  </li>
+                  <li>
+                    Через год Даниил занял должность Специалиста службы снабжения, взяв на себя помимо закупа материала
+                    ещё и крайне важную роль Сметчика.
+                  </li>
+                </ul>
+              </div>
             </swiper-slide>
           </swiper-container>
         </div>
@@ -590,86 +588,86 @@
       <section class="invitation">
         <div class="container_inner">
           <p class="invitation__notes">
-            <span>Наши успехи &mdash; это заслуга замечательных людей, работающий в
-            нашей команде.</span>
+            <span>Наши успехи &mdash; это заслуга замечательных людей, работающий в нашей команде.</span>
             <span>У Нас всегда есть вакансии для сильных кандидатов</span>
-            
           </p>
 
           <div class="invitation__widget">
             <p>
-              Если чувствуешь в Себе потенциал и здоровые амбиции &mdash; ждем
-              рядом с Нами!
+              Если чувствуешь в Себе потенциал и здоровые <br />
+              амбиции &mdash; ждем рядом с Нами!
             </p>
-            <button type="button" class="btn btn_red">
-              присоединитсья к команде
-            </button>
+            <button type="button" class="btn btn_red">присоединитсья к команде</button>
           </div>
         </div>
       </section>
       <section class="contacts">
         <div class="container_inner">
-          <h2>Контакты</h2>
-          <ul class="contacts__controls">
-            <li>
-              <button type="button" class="btn btn_gray">
-                Санкт-Петербург
-              </button>
-            </li>
-            <li><button type="button" class="btn btn_gray">Москва</button></li>
-          </ul>
+          <div class="contacts__content">
+            <h2>Контакты</h2>
+            <ul class="contacts__controls">
+              <li>
+                <button type="button" class="btn btn_gray">Санкт-Петербург</button>
+              </li>
+              <li><button type="button" class="btn btn_gray">Москва</button></li>
+            </ul>
 
-          <ul class="contacts__details">
-            <li class="contacts__line"><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
-            <li class="contacts__line"><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
-            <li class="contacts__line">
-              <a href="#">
-                ул. Заозёрная, д. 8 к. 2, офис 202
-                <br />
-                (7 мин. пешком от метро Фрунзенская)
-              </a>
-            </li>
-          </ul>
+            <ul class="contacts__details">
+              <li class="contacts__line"><a href="tel:+78126027760">8 (812) 602-77-60</a></li>
+              <li class="contacts__line"><a href="mailto:info@pplk.ru">info@pplk.ru</a></li>
+              <li class="contacts__line">
+                <a href="#">
+                  ул. Заозёрная, д. 8 к. 2, офис 202
+                  <br />
+                  (7 мин. пешком от метро Фрунзенская)
+                </a>
+              </li>
+            </ul>
 
-          <ul class="contacts__socials">
-            <li>
-              <a href="#">
-                <svg width="50" height="50">
-                  <use xlink:href="./assets/images/svg/sprite.svg#youtube" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="50" height="50">
-                  <use xlink:href="./assets/images/svg/sprite.svg#vk" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="50" height="50">
-                  <use xlink:href="./assets/images/svg/sprite.svg#telegram" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <img  class="contacts__map" src="./assets/images/webp/map.webp" alt="Карта" />
+            <ul class="contacts__socials">
+              <li>
+                <a href="#">
+                  <svg width="50" height="50">
+                    <use xlink:href="./assets/images/svg/sprite.svg#youtube" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="50" height="50">
+                    <use xlink:href="./assets/images/svg/sprite.svg#vk" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="50" height="50">
+                    <use xlink:href="./assets/images/svg/sprite.svg#telegram" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <img class="contacts__map" src="./assets/images/webp/map.webp" alt="Карта" />
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container_inner">
-        <p>
-          © 2023 Пестовский Лесокомбинат.
-          <br />
-          Все права защищены.
-        </p>
-        
-        <ul class="footer__links">
-          <li><a href="#">Реквизиты</a></li>
-          <li><a href="#">Политика конфиденциальности</a></li>
-        </ul>
+        <div class="footer__content">
+          <p class="footer__copy">
+            <span>© 2023 Пестовский Лесокомбинат. </span>
+            <span>Все права защищены.</span>
+          </p>
+
+          <ul class="footer__links">
+            <li><a href="#">Оформить заявку на кредит</a></li>
+            <li><a href="#">Реквизиты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+
         <a href="#">
           <img src="./assets/images/svg/logo-alpha.svg" alt="Логотип" />
         </a>
