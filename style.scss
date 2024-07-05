@@ -328,7 +328,7 @@ a {
     select {
       appearance: none;
       outline: none;
-      background-image: url('./assets/images/svg/sprite.svg#arrow-bottom');
+      background-image: url('/assets/images/svg/sprite.svg#arrow-bottom');
       background-repeat: no-repeat;
       background-position: right 10px center;
       cursor: pointer;
@@ -358,7 +358,7 @@ a {
 
 .hero {
   height: 500px;
-  background-image: url('./assets/images/webp/main.webp');
+  background-image: url('/assets/images/webp/main.webp');
   background-size: 240%;
   background-position: 75%;
   background-repeat: no-repeat;
@@ -479,20 +479,20 @@ a {
     display: none;
   }
 
-  #vacancies-1:checked ~ .vacancies__controls label[for='vacancies-1'],
-  #vacancies-2:checked ~ .vacancies__controls label[for='vacancies-2'],
-  #vacancies-3:checked ~ .vacancies__controls label[for='vacancies-3'],
-  #vacancies-4:checked ~ .vacancies__controls label[for='vacancies-4'],
-  #vacancies-5:checked ~ .vacancies__controls label[for='vacancies-5'] {
+  #vacancies-1:checked~.vacancies__controls label[for='vacancies-1'],
+  #vacancies-2:checked~.vacancies__controls label[for='vacancies-2'],
+  #vacancies-3:checked~.vacancies__controls label[for='vacancies-3'],
+  #vacancies-4:checked~.vacancies__controls label[for='vacancies-4'],
+  #vacancies-5:checked~.vacancies__controls label[for='vacancies-5'] {
     background-color: #999999;
     color: black;
   }
 
-  #vacancies-1:checked ~ .vacancies__list[data-id='vacancies-1'],
-  #vacancies-2:checked ~ .vacancies__list[data-id='vacancies-2'],
-  #vacancies-3:checked ~ .vacancies__list[data-id='vacancies-3'],
-  #vacancies-4:checked ~ .vacancies__list[data-id='vacancies-4'],
-  #vacancies-5:checked ~ .vacancies__list[data-id='vacancies-5'] {
+  #vacancies-1:checked~.vacancies__list[data-id='vacancies-1'],
+  #vacancies-2:checked~.vacancies__list[data-id='vacancies-2'],
+  #vacancies-3:checked~.vacancies__list[data-id='vacancies-3'],
+  #vacancies-4:checked~.vacancies__list[data-id='vacancies-4'],
+  #vacancies-5:checked~.vacancies__list[data-id='vacancies-5'] {
     display: flex;
   }
 
@@ -548,7 +548,7 @@ a {
     font-size: 12px;
     font-weight: bold;
 
-    & > li {
+    &>li {
       margin-bottom: 5px;
     }
 
@@ -582,7 +582,7 @@ a {
 
     &::before {
       content: ' ';
-      background-image: url('./assets/images/svg/vacancy.svg');
+      background-image: url('/assets/images/svg/vacancy.svg');
       background-repeat: no-repeat;
       background-size: cover;
       width: 25px;
@@ -613,7 +613,7 @@ a {
 
     &::before {
       content: ' ';
-      background-image: url('./assets/images/svg/price.svg');
+      background-image: url('/assets/images/svg/price.svg');
       background-repeat: no-repeat;
       background-size: cover;
       width: 25px;
@@ -719,8 +719,8 @@ a {
     display: none;
   }
 
-  #products-house:checked ~ .products__controls label[for='products-house'],
-  #products-sauna:checked ~ .products__controls label[for='products-sauna'] {
+  #products-house:checked~.products__controls label[for='products-house'],
+  #products-sauna:checked~.products__controls label[for='products-sauna'] {
     background-color: #999999;
     color: black;
   }
@@ -985,7 +985,7 @@ a {
     width: 240px;
     height: 240px;
     flex-shrink: 0;
-    background-image: url('./assets/images/svg/Блик.svg');
+    background-image: url('/assets/images/svg/Блик.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1030,7 +1030,7 @@ a {
 
 .invitation {
   background-color: #212121;
-  background-image: url('./assets/images/svg/people.svg'), url('./assets/images/svg/people-shadow.svg');
+  background-image: url('/assets/images/svg/people.svg'), url('/assets/images/svg/people-shadow.svg');
   background-position: center, center;
   background-size: 120%, 250%;
   background-repeat: no-repeat, no-repeat;
@@ -1122,7 +1122,7 @@ a {
   }
 
   #contacts-spb:checked {
-    & ~ .contacts__content {
+    &~.contacts__content {
       & .contacts__controls label[for='contacts-spb'] {
         background-color: #999999;
         color: black;
@@ -1133,13 +1133,13 @@ a {
       }
     }
 
-    ~ .contacts__map[data-id='contacts-spb'] {
+    ~.contacts__map[data-id='contacts-spb'] {
       display: block;
     }
   }
 
   #contacts-msk:checked {
-    & ~ .contacts__content {
+    &~.contacts__content {
       & .contacts__controls label[for='contacts-msk'] {
         background-color: #999999;
         color: black;
@@ -1150,7 +1150,7 @@ a {
       }
     }
 
-    ~ .contacts__map[data-id='contacts-msk'] {
+    ~.contacts__map[data-id='contacts-msk'] {
       display: block;
     }
   }
@@ -1198,20 +1198,20 @@ a {
     gap: 10px;
 
     &:first-child::before {
-      content: url('./assets/images/svg/phone.svg');
+      content: url('/assets/images/svg/phone.svg');
       display: flex;
       align-items: center;
     }
 
     &:nth-child(2)::before {
-      content: url('./assets/images/svg/envelop.svg');
+      content: url('/assets/images/svg/envelop.svg');
       display: flex;
       align-items: center;
     }
 
     &:last-child {
       &::before {
-        content: url('./assets/images/svg/location-mark.svg');
+        content: url('/assets/images/svg/location-mark.svg');
         display: flex;
         align-items: center;
       }
